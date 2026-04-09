@@ -1,0 +1,123 @@
+/* Общие стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    min-height: 400px;
+}
+
+/* Заголовок (шапка)*/
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #4CAF50;
+    color: white;
+    padding: 15px 20px;
+    font-size: 20px;
+    font-weight: bold;
+    z-index: 1000;
+}
+
+/* Весь контент (положение формы вопросов)*/
+.content {
+    margin-top: 70px;
+    margin-bottom: 80px;
+    display: flex;
+    justify-content: center;
+    min-height: calc(100vh - 150px);
+}
+
+/* Форма вопросов */
+.form-container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 500px;
+    min-height: 200px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+/* Вопросы*/
+.question {
+    margin-bottom: 20px;
+}
+
+/* Текст */
+label {
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+}
+
+/* отступы (поля) */
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+}
+
+textarea {
+    resize: vertical;
+    min-height: 80px;
+}
+
+/* цвета для сайта*/
+.colors {
+    display: flex;
+    gap: 10px;
+}
+
+.color-option {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+}
+
+.color-option input {
+    display: none;
+}
+
+.color-option input:checked + div {
+    border: 3px solid hotpink;
+}
+
+/* стиль кнопки */
+.footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background: white;
+    padding: 10px;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.1);
+}
+
+button {
+    width: 100%;
+    max-width: 500px;
+    display: block;
+    margin: auto;
+    padding: 12px;
+    background: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #45a049;
+}
+
+/* ограничение высоты окна*/
+@media (max-height: 500px) {
+    body {
+        min-height: 300px;
+    }
+}

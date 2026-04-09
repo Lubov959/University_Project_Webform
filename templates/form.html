@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Вопросики</title>
+
+    <!-- подключение CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<header>
+    Вопросики
+</header>
+
+<form action="/submit" method="post">
+
+    <div class="content">
+        <div class="form-container">
+
+            <!-- Имя -->
+            <div class="question">
+                <label>Имя:</label>
+                <input type="text" name="name"
+                       pattern="[A-Za-zА-Яа-яЁё]+"
+                       oninput="this.value = this.value.replace(/[^A-Za-zА-Яа-яЁё]/g, '')"
+                       title="Только буквы"
+                       required>
+            </div>
+
+            <!-- Вопрос про день -->
+            <div class="question">
+                <label>Как проходит ваш день?</label>
+                <textarea name="day"></textarea>
+            </div>
+
+            <!-- Вопрос про ЯП -->
+            <div class="question">
+                <label>Ваш любимый язык программирования?</label>
+                <input type="text" name="language">
+            </div>
+
+            <!-- Выбор цвета -->
+            <div class="question">
+                <label>Ваш любимый цвет?</label>
+                <div class="colors">
+                    <label class="color-option">
+                        <input type="radio" name="color" value="Красный">
+                        <div style="background:red; width:100%; height:100%; border-radius:50%;"></div>
+                    </label>
+
+                    <label class="color-option">
+                        <input type="radio" name="color" value="Синий">
+                        <div style="background:blue; width:100%; height:100%; border-radius:50%;"></div>
+                    </label>
+
+                    <label class="color-option">
+                        <input type="radio" name="color" value="Зелёный">
+                        <div style="background:green; width:100%; height:100%; border-radius:50%;"></div>
+                    </label>
+
+                    <label class="color-option">
+                        <input type="radio" name="color" value="Жёлтый">
+                        <div style="background:yellow; width:100%; height:100%; border-radius:50%;"></div>
+                    </label>
+
+                    <label class="color-option">
+                        <input type="radio" name="color" value="Чёрный">
+                        <div style="background:black; width:100%; height:100%; border-radius:50%;"></div>
+                    </label>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- КНОПКА -->
+    <div class="footer">
+        <button type="submit">Скачать Word</button>
+    </div>
+
+</form>
+
+</body>
+</html>
