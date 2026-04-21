@@ -58,6 +58,7 @@ input, textarea {
     border-radius: 8px;
     border: 1px solid #ccc;
     font-size: 14px;
+    box-sizing: border-box;
 }
 
 textarea {
